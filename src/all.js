@@ -1,5 +1,9 @@
 const https = require("https");
 
+// Ping Heroku app every 5 min to keep alive
+var http = require("http");
+setInterval(() => (http.get("https://nas-all.herokuapp.com/"), 300000));
+
 // Bot configs read in from environment
 const room_id = process.env.HUBOT_GROUPME_ROOM_ID;
 const bot_id = process.env.HUBOT_GROUPME_BOT_ID;
@@ -199,7 +203,7 @@ class AllBot {
     );
 
     // Mention @all command
-    this.robot.hear(/(.*)@fools(.*)/i, res => this.respondToAtAll(res));
+    this.robot.hear(/(.*)@bruhs(.*)/i, res => this.respondToAtAll(res));
   }
 }
 
