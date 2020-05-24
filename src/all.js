@@ -1,7 +1,7 @@
 const https = require("https");
 
 // Ping Heroku app every 5 min to keep alive
-var http = require("http");
+const http = require("http");
 setInterval(() => (http.get("https://nas-all.herokuapp.com/"), 300000));
 
 // Bot configs read in from environment
