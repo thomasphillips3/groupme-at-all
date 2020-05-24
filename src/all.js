@@ -203,7 +203,7 @@ class AllBot {
     );
 
     // Mention @all command
-    this.robot.hear(/(.*)@bruhs(.*)/i, res => this.respondToAtAll(res));
+    this.robot.hear(/(.*)@fools(.*)/i, res => this.respondToAtAll(res));
   }
 }
 
